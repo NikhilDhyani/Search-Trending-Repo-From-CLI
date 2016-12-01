@@ -32,7 +32,7 @@ while(cond):
                  print(i["description"])
                  print("DETAILS ABOUT USERS\n")
                  users = json.loads((requests.get(i["url"])).text)
-                 print("StrangersCount = %s watchers_count: %s \n"%(users["stargazers_count"],users["watchers_count"]))
+                 print("StrangersCount = %s watchers_count: %s Subscriber_Count: %s \n"%(users["stargazers_count"],users["watchers_count"],users["subscribers_count"]))
                  c = raw_input("want to open page y or n \n")
                  if c =='y':
                     webbrowser.open((i["html_url"]))
